@@ -1,0 +1,28 @@
+﻿1.set proxy
+  $ npm set proxy http://webproxy.wlb2.nam.nsroot.net:8080/
+2.initial npm(if you lost the package.json)
+  $ npm init --yes
+3.install grunt(vertion>=0.4)
+  $ npm install grunt -g
+4.install karma
+  $ npm install karma --save-dev
+  $ npm install -g karma-cli
+5.install karma-jasmine(2.0)
+  $ npm install karma-jasmine karma-chrome-launcher --save-dev
+  $ npm install jasmine-core --save-dev
+6.initial karma
+  $ karma init
+7.start test
+  $ karma start
+  
+
+
+karma-jenkins:
+npm i -g yo generator-karma
+npm install karma-junit-reporter --save-dev
+npm install karma karma-coverage --save-dev
+
+AMD:
+npm install -g grunt-cli bower yo generator-karma generator-angular
+npm install requirejs
+npm install karma-requirejs
