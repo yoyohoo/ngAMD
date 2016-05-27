@@ -1,0 +1,57 @@
+﻿<div class="col-md-12">
+	<div class="page-header">
+		<h3>Alert<small>(Custom.Alert)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h4>Big alert on the center:</h4>
+		<h5>The elements:</h5>
+		<pre>&lt;div class="alert-lg alert-suc"&gt;&lt;strong&gt;Success!&lt;/strong&gt; Data downloads ready.&lt;/div&gt;</pre>
+		<pre>&lt;div class="alert-lg alert-err"&gt;&lt;strong&gt;Warning!&lt;/strong&gt; Data downloads failed.
+    &lt;span class="alert-close" onclick="$(this.parentNode).remove();"&gt;×&lt;/span&gt;
+&lt;/div&gt;</pre>
+		<div class="show-alert">
+			<div class="alert-lg alert-suc"><strong>Success!</strong> Data downloads ready.</div>
+			<div class="alert-lg alert-err"><strong>Warning!</strong> Data downloads failed.<span class="alert-close" onclick="$(this.parentNode).remove();">×</span></div>
+		</div>
+		<strong>See alert on the top: </strong><a class="btn btn-default" href="javascript:">Show Alert</a>
+		<h4>Small alert on the right bottom:</h4>
+		<h5>The elements:</h5>
+		<pre>&lt;div class="alert-sm alert-suc"&gt;&lt;strong&gt;Success!&lt;/strong&gt; Data downloads ready.&lt;/div&gt;</pre>
+		<pre>&lt;div class="alert-sm alert-err"&gt;&lt;strong&gt;Warning!&lt;/strong&gt; Data downloads failed.
+    &lt;span class="alert-close" onclick="$(this.parentNode).remove();"&gt;×&lt;/span&gt;
+&lt;/div&gt;</pre>
+		<strong>See alert on the right bottom: </strong><a class="btn btn-default" href="javascript:">Show Alert</a>
+	</div>
+	<div class="col-md-4">
+		<blockquote><h5>Tips:
+			<small>Types:
+				<ul>
+					<li>lg: large on the center content.</li>
+					<li>sm: small at the right bottom of the screen.</li>
+				</ul>
+			</small>
+			<br>
+			<small>Colors:
+				<ul>
+					<li>success: <code>#3c763d</code></li>
+					<li>error: <code>#a94442</code></li>
+				</ul>
+			</small>
+			<br>
+			<small>Optional amination:
+				<ul>
+					<li>fadeIn</li>
+					<li>fadeInUp</li>
+					<li>fadeInDown</li>
+					<li>fadeOutUp</li>
+					<li>fadeOutDown</li>
+				</ul>
+			</small>
+			</h5>
+		</blockquote>
+	</div>
+</div>
+<div class="alert-stack">
+	<div class="alert-sm alert-suc animated fadeInUp"><strong>Success!</strong> Data downloads ready.</div>
+	<div class="alert-sm alert-err"><strong>Warning!</strong> Data downloads failed.<span class="alert-close" onclick="$(this.parentElement).remove();">×</span></div>
+</div>

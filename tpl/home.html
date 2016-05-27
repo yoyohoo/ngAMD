@@ -1,0 +1,54 @@
+<div class="col-md-12">
+	<div class="page-header">
+		<h3>{{ title }}</h3>
+	</div>
+	<div class="col-md-8">
+		<h4>The view(index.html):</h4>
+		<pre>&lt;html ng-app="uiApp"&gt;
+  &lt;head&gt;
+    &lt;script src="js/lib/angular.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/lib/angular-route.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container"&gt;
+      &lt;div ng-view&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+		<h4>The template(home.html):</h4>
+		<pre>&lt;div class="col-md-12"&gt;
+  &lt;div class="page-header"&gt;
+    &lt;h3&gt;{ { title } }&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+		<h4>The router(app.js):</h4>
+		<pre>angular.module('uiApp', ['ngRoute','uiControllers'])
+    .config(['$routeProvider', function($routeProvider) {
+	 $routeProvider.when("/Home", {
+	     templateUrl: 'tpl/Home.html',
+	     controller: 'HomeController'
+	 })
+    }])
+})(window.angular);</pre>
+
+		<h4>The controller(uiController.js):</h4>
+		<pre>(function(ng) {
+    ng.module('uiControllers', [])
+    .controller('HomeController', ['$scope', function($scope) {
+        $scope.title = 'Simple start:';
+    }])
+})(window.angular);</pre>
+	</div>
+	<div class="col-md-4">
+		<div>
+			<blockquote cite="/home">
+				<p><small>The directive: <code>ng-app</code> in the root element marks the page as an angularjs application, and leads this application to bootstrap from which module. </small></p>
+				<p><small>The directive: <code>ng-view</code> in the body helps to include the template rendered by the current route(from thelocation hash) into the main layout view, it changes whenever the router changed.</small></p>
+				<p><small>The <code>$routeProvider</code> binding the controller and views, it needs the module <code>ngRoute</code> to be installed.</small></p>
+				<p><small><code>{ { title } }</code> binding the value from <code>$scope.title = 'Simple start:';</code></small></p>
+			</blockquote>
+		</div>
+	</div>
+</div>

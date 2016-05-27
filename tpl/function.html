@@ -1,0 +1,54 @@
+<div class="col-md-12">
+	<div class="page-header">
+		<h3>Favicon error:</h3>
+	</div>
+	<div class="col-md-8">
+		<h5>how to prevent favicon error:</h5>
+		<pre>&lt;link rel="icon" href="data:;base64,iVBORw0KGgo="&gt;</pre>
+	</div>
+</div>
+
+<div class="col-md-12">
+	<div class="page-header">
+		<h3>Click sequence</h3>
+	</div>
+	<div class="col-md-8">
+		<h5>example:</h5>
+		<p>
+			<a href="javascript:" id='click-test' class="btn btn-primary" title="page 1" onclick="onClickTest()" ng-click="ngClickTest()">Bingo!</a> <a href="javascript:" class="btn btn-primary" onclick="document.getElementById('click-result').innerText='RESULTS(UNIT:MILLI SECONDS):'">clear</a>
+		</p>
+		<p>
+			<pre id="click-result">RESULTS(UNIT:MILLI SECONDS):</pre>
+		</p>
+	</div>
+</div>
+<div class="col-md-12">
+	<div class="page-header">
+		<h3>History API<small>(redirect without refresh)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h5>html4 history api:</h5>
+		<pre class="prettyprint">1. history.go(0) = location.reload() 
+   -go(x) means goto the page |x| pages before/after
+2. history.back() = history.go(-1) 
+   -go back to last page
+3. history.foward() = history.go(1) 
+   -go foward 1 step
+4. history.length 
+   -the history pages stack length</pre>
+		<h5>html5 history api:</h5>
+		<pre class="prettyprint">1. history.pushState(data, title, '' || url )  
+   -data: needs to transport; 
+   -title: the new page title; 
+   -url: the new page url,'' means current page;
+   -example: 
+	history.pushState({ foo: "bar" }, "bar page", "bar.html");
+	history.pushState({page: 1}, "title 1", "?page=1");
+2. histaory.state
+   ... ...
+		</pre>
+	</div>
+	<div class="col-md-8">
+
+	</div>
+</div>

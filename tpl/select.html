@@ -1,0 +1,34 @@
+<div class="col-md-12">
+	<div class="page-header">
+		<h3>Selects<small>(Bootstrap.Selects)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h5>The elements:</h5>
+		<pre class="prettyprint">&lt;input type="text" ng-model="newCity"&gt;
+&lt;a class="btn btn-default" ng-click="AddNewCity()"&gt;AddNewCity&lt;/a&gt;</pre>
+		<pre class="prettyprint">&lt;select class="form-control"&gt;
+  &lt;option ng-repeat="city in primaryCities"&gt;{ { city } }&lt;/option&gt;
+&lt;/select&gt;</pre>
+	<h5>The controller:</h5>
+	<pre class="prettyprint"><code class="language-javascript">$scope.primaryCities = ['Beijing', 'Shanghai', 'Guangzhou', 'Shenzhen'];
+$scope.AddNewCity = function() {
+  var a = $scope.primaryCities,
+    c = $scope.newCity;
+  c && !a.Contains(c) && a.push(c);
+}</code></pre>
+	<div class="form-group">
+	    <label for="newCity">Add new city:</label>
+	    <input type="text" class="form-control" placeholder="Input here..." ng-model="newCity" style="width:250px;display:inline-block;">
+	    <a class="btn btn-default" href="javascript:" ng-click="AddNewCity()">AddNewCity</a>
+  	</div>	
+	
+	<select class="form-control">
+		<option ng-repeat="city in primaryCities">{{ city }}</option>
+	</select>
+</div>
+<div class="col-md-4">
+	<blockquote><h5>Tips:
+		</h5>
+	</blockquote>
+</div>
+</div>

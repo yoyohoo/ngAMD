@@ -1,0 +1,35 @@
+<div class="col-md-12">
+	<div class="page-header">
+		<h3>Customize jquery Plugins<small>(Plugins.Alert)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h4>Big alert on the element:</h4>
+		<pre>$.fn.extend({
+    alert: function(msg, title) {
+    	var alert = '&lt;div class="alert-lg alert-suc animated fadeInUp"&gt;&lt;strong&gt;' +
+    	    title + '&lt;/strong&gt; ' + msg + alterClose;
+    	if (!this.find('.show-alert').length) this.append(stack);
+	return this.find('.show-alert').append(alert);
+    }
+})</pre>
+		<a class="btn btn-primary" ng-click="showBigAlert()" href="javascript:">Bingo!</a>
+		<div class="big-alert"></div>
+		<h4>Small alert on the right bottom:</h4>
+		<pre>$.fn.extend({
+    alert: function(msg, title) {
+	var alert = '&lt;div class="alert-sm alert-suc animated fadeInUp"&gt;&lt;strong&gt;' +
+		title + '&lt;/strong&gt;' + msg + alterClose;
+	if (!$('body').find('.alert-stack').length) {
+		$('body').append(stackSm);
+	} else {
+		var alerts = $('body').find('.alert-stack .alert-sm');
+		alerts.length > 2 && alerts.first().remove();
+	}
+	return $('body').find('.alert-stack').append(alert);
+    }
+})</pre>
+		<a class="btn btn-primary" ng-click="showBottomAlert()" href="javascript:">Bingo!</a>
+		<h4> Please drag me:</h4>
+		<a draggable title="drag me" class="btn btn-danger">drag me</a>
+	</div>
+</div>

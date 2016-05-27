@@ -1,0 +1,151 @@
+<div class="col-md-12">
+	<div class="page-header">
+		<h3>Datepicker<small>(Kendo.Datepicker)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h4>Basic usage:</h4>
+		<h5>The elements:</h5>
+		<pre><b>datepicker: </b>&lt;input id="datepicker" value="2016/02/22" /&gt;</pre>
+		<pre><b>monthpicker: </b>&lt;input id="monthpicker" value="2016:February"/&gt;</pre>
+		<h5>The controller:</h5>
+		<pre class="prettyprint">
+<code class="language-javascript">$('#datepicker').kendoDatePicker({
+  format: 'yyyy-MM-dd'
+});</code></pre>
+		<pre class="prettyprint">
+<code class="language-javascript">$("#monthpicker").kendoDatePicker({
+  start: "year",
+  depth: "year",
+  format: "yyyy:MMMM"
+});</code></pre>
+		<h5>See example:</h5>
+		<p><b>datepicker: </b><select id="formatCombo">
+		  <option>yyyy/MM/dd</option>
+		  <option>yyyyMMdd</option>
+		  <option>yyyy-MM-dd</option>
+		  <option>yyyyMMMMdd</option>
+		  <option>yyyy:MMMM:dd</option>
+		</select>
+		<input id="datepicker" value="2016/02/22" /></p>
+		<p><b>monthpicker: </b><input id="monthpicker" value="2016:February" style="width: 250px;" /></p>
+
+		<br>
+
+		<h4>Advanced usage:</h4>
+		<h5>The elements:</h5>
+		<pre><b>A(attribute): </b>&lt;div date-picker&gt;&lt;/div&gt;</pre>
+		<pre><b>C(class): </b>&lt;div class="datePicker"&gt;&lt;/div&gt;</pre>
+		<pre><b>E(element): </b>&lt;date-picker&gt;&lt;/date-picker&gt;</pre>
+		<h5>The directive:</h5>
+		<pre class="prettyprint">
+<code class="language-javascript">.directive('datePicker', function() {
+return {
+	restrict: 'ACE',
+	link: function($scope, $els) {
+		setTimeout.call(this, function() {
+			$els.find('input').kendoDatePicker({
+				format: 'yyyy/MM/dd'
+			});
+		});
+	},
+	template: '&lt;input value="2016/02/19" /&gt;'
+}
+})</code></pre>
+		<h5>See example:</h5>
+ 		<date-picker></date-picker>
+	</div>
+	<div class="col-md-4">
+		<blockquote><h5>Tips:
+		<small>Prams start, end, depth limit the date region.</small>
+		<br>
+		<small>We can custom the date format with <strong>anyway</strong> we like, such as: <code>"yy%MM%dd"</code>, <code>"@_@ : yy -_-! MM ^_^ dd"</code>, and so on.</small>
+		<br>
+		<small>Date formats:<ul>
+			<li><p><code>yyyy</code>
+			Parses a 4 digits year.</p>
+			</li>
+			<li><p><code>yy</code>
+			Parses a 2 digits year.</p>
+			</li>
+			<li><p><code>y</code>
+			Parses a year with 1, 2, 3, or 4 digits.</p>
+			</li>
+			<li><p><code>MMMM</code>
+			Parses the full name of a month.</p>
+			</li>
+			<li><p><code>MMM</code>
+			Parses the short name of a month.</p>
+			</li>
+			<li><p><code>MM</code>
+			Parses a numeric month.</p>
+			</li>
+			<li><p><code>M</code>
+			Parses a numeric month.</p>
+			</li>
+			<li><p><code>M!</code>
+			Parses a numeric month, but allowing an optional leading zero</p>
+			</li>
+			<li><p><code>dd</code>
+			Parses a numeric day.</p>
+			</li>
+			<li><p><code>d</code>
+			Parses a numeric day.</p>
+			</li>
+			<li><p><code>d!</code>
+			Parses a numeric day, but allowing an optional leading zero</p>
+			</li>
+			<li><p><code>EEEE</code>
+			Parses the full name of a day.</p>
+			</li>
+			<li><p><code>EEE</code>
+			Parses the short name of a day.</p>
+			</li>
+			<li><p><code>HH</code>
+			Parses a 24 hours time.</p>
+			</li>
+			<li><p><code>H</code>
+			Parses a 24 hours time.</p>
+			</li>
+			<li><p><code>hh</code>
+			Parses a 12 hours time.</p>
+			</li>
+			<li><p><code>h</code>
+			Parses a 12 hours time.</p>
+			</li>
+			<li><p><code>mm</code>
+			Parses the minutes.</p>
+			</li>
+			<li><p><code>m</code>
+			Parses the minutes.</p>
+			</li>
+			<li><p><code>sss</code>
+			Parses the milliseconds.</p>
+			</li>
+			<li><p><code>ss</code>
+			Parses the seconds.</p>
+			</li>
+			<li><p><code>s</code>
+			Parses the seconds.</p>
+			</li>
+			<li><p><code>a</code>
+			Parses a 12 hours time with AM/PM.</p>
+			</li>
+			<li><p><code>Z</code>
+			Parses the timezone offset in a signed 4 digit representation</p>
+			</li>
+			<li><p><code>ww</code>
+			Parses the week number</p>
+			</li>
+			<li><p><code>w</code>
+			Parses the week number</p>
+			</li>
+			<li><p><code>G</code>, <code>GG</code>, <code>GGG</code>
+			Parses the era (<code>AD</code> or <code>BC</code>)</p>
+			</li>
+			<li><code>GGGG</code>
+			Parses the long form of the era (<code>Anno Domini</code> or <code>Before Christ</code>)</li>
+		</ul></small>
+		</h5>
+		</blockquote>
+	</div>
+</div>

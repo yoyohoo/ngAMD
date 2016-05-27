@@ -1,0 +1,61 @@
+<div class="col-md-12">
+	<div class="page-header">
+		<h3>ComboBox<small>(Kendo.ComboBox)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h4>Basic usage:</h4>
+		<h5>The elements:</h5>
+		<pre>&lt;select id="cityCombo" placeholder="Select city..."&gt;
+    &lt;option&gt;beijing&lt;/option&gt;
+    &lt;option&gt;shanghai&lt;/option&gt;
+    &lt;option&gt;guangzhou&lt;/option&gt;
+&lt;/select&gt;</pre>
+		<h5>The controller:</h5>
+		<pre class="prettyprint">
+$('#cityCombo').append('&lt;option&gt;shenzhen&lt;/option&gt;');
+$('#cityCombo').kendoComboBox();</pre>
+
+		<br>
+
+		<h4>Advanced usage:</h4>
+		<h5>The elements:</h5>
+		<pre>&lt;city-combo&gt;&lt;/city-combo&gt;</pre>
+		<h5>The directive:</h5>
+		<pre class="prettyprint">.directive('cityCombo', function() {
+return {
+	restrict: 'E',
+	scope: {
+		type: '=name'
+	},
+	link: function($scope, $els) {
+		setTimeout.call(this, function() {
+			$els.find('select[name=cityCombo]').kendoComboBox();
+		});
+	},
+	controller: function($scope) {
+		$scope.cities = ['Beijing', 'Shanghai', 'Guangzhou', 'Shenzhen'];
+	},
+	template: '&lt;select name="cityCombo" placeholder="Select city..."&gt;&lt;option ng-repeat="city in cities"&gt;{{city}}&lt;/option>&lt;/select&gt;'
+}
+})</pre>
+		<h5>See example:</h5>
+		<city-combo></city-combo>
+	</div>
+	<div class="col-md-4">
+		<blockquote><h5>Tips:
+		<small>Basic: kendo css & js.</small>
+		<small> Advaced: angularjs & kendo css.</small>
+		<br>
+		<small>The keywords of angularjs used here:
+		<ul>
+			<li>directive: to display the element</li>
+			<li>restrict: <code>ACE</code></li>
+			<li>scope: instead of <code>controller or not</code></li>
+			<li>link: initial the func in <code>directive</code></li>
+			<li>controller: with the scope</li>
+			<li>template: custom your html</li>
+		</ul>
+		</small></h5>
+		</blockquote>
+	</div>
+</div>

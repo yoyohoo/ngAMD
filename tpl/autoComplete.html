@@ -1,0 +1,76 @@
+<div class="col-md-12">
+	<div class="page-header">
+		<h3>AutoComplete<small>(Kendo.AutoComplete)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h4>Basic usage:</h4>
+		<h5>The elements:</h5>
+		<pre><b>Simple autoComplete: </b>&lt;input id="primaryCities" /&gt;</pre>
+		<h5>The controller:</h5>
+		<pre class="prettyprint">
+<code class="language-javascript">$scope.primaryCities = ['Beijing', 'Shanghai', 'Guangzhou', 'Shenzhen'];
+$("#primaryCities").kendoAutoComplete({
+	dataSource: $scope.primaryCities
+});
+</code></pre>
+		<h5>See example:</h5>
+		<strong>Primary cities: </strong><input id="primaryCities" style="width:50%;" />
+
+		<br><br>
+
+		<h4>Advanced usage:</h4>
+		<h5>The directive:</h5>
+		<pre><b>simple: </b>&lt;simple-auto-complete&gt;&lt;/simple-auto-complete&gt;</pre>
+		<pre><b>custom: </b>&lt;custom-autocomplete&gt;&lt;/custom-autocomplete&gt;</pre>
+		<h5>The controller:</h5>
+		<pre class="prettyprint"><strong>Simple:</strong>
+.directive('simpleAutoComplete', function() {
+	return {
+		restrict: 'E',
+		link: function($scope, $els) {
+			$els.find('input').kendoAutoComplete({
+				dataSource: $scope.primaryCities
+			});
+		},
+		template: '&lt;input /&gt;'
+	}
+})</code></pre>
+		<pre class="prettyprint">
+<code class="language-javascript"><strong>Custom:</strong>
+getJsonp('http://demos.telerik.com/kendo-ui/service/products?callback=angular.callbacks.autoCompleteCallback');
+angular.callbacks.autoCompleteCallback = function(response) {
+	$scope.customProducts = response;
+	$els.find('input').kendoAutoComplete({
+		dataTextField: 'ProductName',
+		dataSource: $scope.customProducts,
+		filter: "startswith",
+		placeholder: "Select product...",
+		animation: {
+			open: {
+				effects: "fade:in",
+				duration: 500
+			}
+		}
+	});
+}</code></pre>
+		<h5>The service:</h5>
+		<pre class="prettyprint">
+<code class="language-javascript"><strong>Custom:</strong>
+angular.module('uiServices', [])
+.factory('getJsonp', ['$http', function($http) {
+	return function(url) {
+		return $http.jsonp(url);
+	}
+}])</code></pre>
+		<h5>See example:</h5>
+		<p><strong>Primary cities: </strong><simple-auto-complete></simple-auto-complete></p>
+		<p><strong>Server autoComplete:</strong></p>
+		<custom-autocomplete></custom-autocomplete>
+	</div>
+	<div class="col-md-4">
+		<blockquote><h5>Tips:
+		<small>This guy is too lazy...</small>
+			</h5>
+		</blockquote>
+	</div>
+</div>

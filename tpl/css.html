@@ -1,0 +1,101 @@
+<div id="btn" class="col-md-12">
+	<div class="page-header">
+		<h3>Button<small>(Custom.Button)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h4>button-bluefill:</h4>
+		<a class="button-bluefill button-small">small button-bluefill</a>
+		<span class="button-bluefill">button-bluefill</span>
+		<div class="button-bluefill button-large">big button-bluefill</div>
+		<h4>button-whitefill:</h4>
+		<span class="button-whitefill button-small">small button-whitefill</span>
+		<span class="button-whitefill">button-whitefill</span>
+		<span class="button-whitefill button-large">large button-whitefill</span>
+	</div>
+	<div class="col-md-4"></div>
+</div>
+<div id="tgl-btn" class="col-md-12">
+	<div class="page-header">
+		<h3>ToggleButton<small>(Custom.ToggleButton)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h4>toggle button:</h4>
+		<div class="toggle-button">
+			<a class="button-first button-active">america</a>
+			<a>china</a>
+			<a class="button-last">german</a>
+		</div>
+	</div>
+	<div class="col-md-4"></div>
+</div>
+<div id="filter" class="col-md-12">
+	<div class="page-header">
+		<h3>Filter<small>(Angular.Filters)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h4>set filter:</h4>
+		<div id="tgl-filter" class="toggle-button" style="margin-bottom:50px;">
+			<a ng-click="setFilter('all')" class="button-first button-active"> all </a>
+			<a ng-click="setFilter('isNum')">isNum</a>
+			<a ng-click="setFilter('oddItems')" class="button-last">oddItems</a>
+		</div>
+		<ul ng-show = 'currentFilter == "all"' class="list-group">
+		  <li class="list-group-item" ng-repeat="item in items">{{item}}</li>
+		</ul>
+		<ul ng-show = 'currentFilter == "isNum"' class="list-group">
+		  <li class="list-group-item" ng-repeat="item in items | isNum">{{item}}</li>
+		</ul>
+		<ul ng-show = 'currentFilter == "oddItems"' class="list-group">
+		  <li class="list-group-item" ng-repeat="item in items | oddItems">{{item}}</li>
+		</ul>
+	</div>
+	<div class="col-md-4"></div>
+</div>
+<div id="table" class="col-md-12">
+	<div class="page-header">
+		<h3>Table<small>(Custom.Table)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h4>Table:</h4>
+		<div class="table-slate">
+			<table>
+				<caption>table name:</caption>
+				<thead>
+					<tr>
+						<th>id</th><th>name</th><th>title</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>data</td><td>data</td><td>data</td>
+					</tr>
+					<tr>
+						<td>data</td><td>data</td><td>data</td>
+					</tr>
+					<tr>
+						<td>data</td><td>data</td><td>data</td>
+					</tr>
+					<tr>
+						<td>data</td><td>data</td><td>data</td>
+					</tr>
+					<tr>
+						<td>data</td><td>data</td><td>data</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="col-md-4"></div>
+</div>
+<div id="tgl-txt" class="col-md-12">
+	<div class="page-header">
+		<h3>ToggleText<small>(Custom.ToggleText)</small></h3>
+	</div>
+	<div class="col-md-8">
+		<h4>click below to toggle text:</h4>
+		<div class="toggle-txt">
+			<textarea name="info" rows="2">The element displays a mechanism for allowing the user to resize the element, which may only be +086-13661605745 resized vertically.</textarea>
+		</div>
+	</div>
+	<div class="col-md-4"></div>
+</div>
