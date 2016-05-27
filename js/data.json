@@ -1,0 +1,13 @@
+ [{
+ 	id: 1,
+ 	name: 'Beijing'
+ }, {
+ 	id: 1,
+ 	name: 'Shanghai'
+ }, {
+ 	id: 1,
+ 	name: 'Guangzhou'
+ }, {
+ 	id: 1,
+ 	name: 'Shenzhen'
+ }]
