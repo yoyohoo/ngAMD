@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+		<link rel="icon" href="images/citi-logo.png">
+		<link rel="stylesheet" href="styles/app.css">
+		<link rel="stylesheet" href = "styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/kendo/kendo.material.min.css">
+		<link rel="stylesheet" href="styles/kendo/kendo.common-material.min.css">
+		<!-- <base href="http://10.102.148.84:1234/"> -->
+		<base href="/">
+		<title>DEMO</title>
+		<script data-main="js/main.js" src="js/lib/require.js" defer async="true"></script>
+	</head>
+	<body>
+		<div ng-include="'tpl/navbar.html'"></div>
+		<div class="container">
+			<br>
+			<hr>
+			<div ng-view></div>
+		</div>
+		<div ng-include="'tpl/footer.html'"></div>
+	</body>
+</html>
