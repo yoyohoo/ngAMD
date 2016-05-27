@@ -1,0 +1,187 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/*button*/
+.button-bluefill {
+	display: inline-block;
+	height: 31px;
+	line-height: 33px;
+	padding: 0px 7px;
+	border: 1px solid #1165e5;
+	border-radius: 5px;
+	khtml-border-radius: 5px;
+	moz-border-radius: 5px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 12px;
+	color: #fff;
+	margin-right: 5px;
+	background: #1165e5;
+	background: url(../images/pellet-button-bg-cv-blue.png);
+	cursor: pointer;
+}
+.button-bluefill:hover {
+	color: #1165e5;
+	background: #fff;
+	text-decoration: none;
+	background: url(../images/pellet-button-bg-white.png) bottom #fff repeat-x;
+}
+.button-bluefill:visited {
+	color: #fff;
+	text-decoration: none !important;
+}
+.button-whitefill {
+	display: inline-block;
+	height: 30px;
+	line-height: 28px;
+	padding: 0px 7px;
+	border: 1px solid #95aabc;
+	border-radius: 5px;
+	khtml-border-radius: 5px;
+	moz-border-radius: 5px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-size: 12px;
+	color: #1165e5;
+	margin-right: 5px;
+	background: url(../images/pellet-button-bg-white.png) bottom #fff repeat-x;
+	cursor: pointer;
+}
+.button-whitefill:hover {
+	border-color: #1165e5;
+	color: #1165e5;
+}
+.button-small {
+	height: 20px;
+	line-height: 18px;
+	font-size: 10px;
+}
+.button-large {
+	height: 36px;
+	line-height: 34px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+/*toggle button*/
+.toggle-button a {
+	margin: 0 auto;
+	height: 30px;
+	float: left;
+	box-shadow: 1px 1px #eee;
+	line-height: 27px;
+	font-size: 14px;
+	display: inline-block;
+	font-weight: bold;
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+	border: 1px solid #ccc;
+	border-right: none;
+	padding: 1px 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: url(../images/pellet-button-bg-white.png) bottom #fff repeat-x;
+	cursor: pointer;
+}
+.toggle-button a:hover {
+	color: #1165e5;
+	border-color: #ccc;
+	box-shadow: 1px 1px #ededed;
+}
+.toggle-button a.button-active {
+	background-color: #1165e5;
+	color: #fff;
+	border-color: #1165e5;
+	background: url(../images/pellet-button-bg-cv-blue.png);
+}
+.toggle-button a.button-active:hover {
+	color: #eee;
+	border-color: #ccc;
+	border-color: #1165e5;
+}
+.toggle-button a.button-first {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.toggle-button a.button-last {
+	border-right: 1px solid #ccc;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/*table*/
+.table-slate {
+	background: SlateGray;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	height: 300px;
+}
+.table-slate caption, .table-slate table thead, .table-slate table tr {
+	padding-left: 15px;
+	height: 39px;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+}
+.table-slate caption {
+	text-transform: uppercase;
+	color: #333;
+	font-weight: bold;	/*background: url(../images/ad-box-blue-wave-bg.png) repeat-x;
+			    background-size: 5px 50px;*/
+}
+.table-slate table {
+	width: 100%;
+	background: #fff;
+}
+.table-slate table:after {
+	content: '';
+	background: url(../images/edge-shadow-bottom.png) repeat-x;
+	height: 15px;
+	width: 95%;
+	position: absolute;
+	left: 15px;
+	bottom: 9px;
+}
+.table-slate table thead {
+	color: slategray;
+}
+.table-slate table tbody tr:nth-child(even) {
+	background: #fff;
+}
+.table-slate table tbody tr:nth-child(odd), .table-slate table tbody tr:hover {
+	background: aliceblue;
+}
+.table-slate table th, .table-slate table td {
+	padding-left: 15px;
+}
+
+/*toggle-text*/
+.toggle-txt {
+	width: 100%;
+	margin: 30px auto;
+}
+.toggle-txt:hover {
+	cursor: pointer;
+}
+.toggle-txt:before {
+	content: 'Cover the page:';
+	top: 45px;
+	left: 30px;
+	color: #1165e5;
+	position: absolute;
+	background-color: #fff;
+	padding: 5px;
+	font-weight: 700;
+}
+.toggle-txt:hover::before {
+}
+.toggle-txt textarea {
+	display: none;
+	resize: vertical;
+	width: 100%;
+	padding: 20px;
+	border-radius: 5px;
+	word-break: break-all;
+	border: 1px solid #999;
+}

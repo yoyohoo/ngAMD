@@ -1,0 +1,238 @@
+/*footer*/
+footer {
+	text-align: center;
+	padding: 30px 0;
+	margin-top: 70px;
+	border-top: 1px solid #e5e5e5;
+	background-color: #f5f5f5;
+}
+footer p {
+	margin: 0 0 10px;
+}
+
+/*side tip*/
+blockquote small {
+	font-size: 12.5px !important;
+	line-height: 1.8 !important;
+}
+
+/*alert*/
+.alert-stack {
+	bottom: 0;
+	right: 10px;
+	position: fixed;
+}
+.alert-sm, .alert-lg {
+	text-align: center;
+	margin: 10px auto;
+	padding: 10px;
+	min-width: 250px;
+	line-height: 20px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+}
+.alert-suc {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+.alert-err {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+.alert-lg {
+	padding: 15px;
+	width: 100%;
+}
+.alert-close {
+	cursor: pointer;
+	box-sizing: border-box;
+	color: inherit;
+	font-size: 1.5em;
+	float: right;
+	opacity: .5;
+}
+.alert-close:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+/*kendo-grid*/
+.kendo-grid {
+}
+.kendo-grid tr {
+	height: 39px;
+	line-height: 39px;
+	background-color: #fff;
+	border-bottom: 1px solid #e6e6e6;
+}
+.kendo-grid .row-selected {
+	background: aliceblue !important;
+}
+.kendo-grid input[type=checkbox] {
+	padding: 0;
+	width: 14px;
+	height: 14px;
+}
+.icon-xsm.icon-pdf {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../images/file_icon_pdf_xsml.png) no-repeat;
+}
+
+/*animation*/
+.animated {
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.animated.infinite {
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+@-webkit-keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+.fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+}
+@-webkit-keyframes fadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+.fadeOutUp {
+	-webkit-animation-name: fadeOutUp;
+	animation-name: fadeOutUp;
+}
+@-webkit-keyframes fadeOutUp {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+}
+@keyframes fadeOutUp {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+}
+.fadeOutDown {
+	-webkit-animation-name: fadeOutDown;
+	animation-name: fadeOutDown;
+}
+@-webkit-keyframes fadeOutDown {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+}
+@keyframes fadeOutDown {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+}
+
+/*menu*/
+.menu {
+	background: url(../images/ad-box-blue-wave-bg.png) repeat-x;
+	background-size: 5px 50px;
+}
+.menu a {
+	color: #fff !important;
+}
+.menu a:hover {
+	color: #eee;
+}
+
+/* panel head*/
+.cyan-head {
+	background-color: #00bdf2;
+	background-image: url('../images/Header_Span.gif');
+	background-position: 0 -22px;
+}
