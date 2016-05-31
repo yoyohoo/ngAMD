@@ -1,2 +1,2 @@
 # ngAMD
-angularjs amd
+angularjs with requirejs
