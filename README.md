@@ -4,15 +4,15 @@ angularjs with requirejs
 
 //动态加载directive：
 VIEW:
-<div class="col-lg-12" ng-app="clientApp" ng-controller="clientController">
-	<div class="container">
-		<hr>
-		<client-Header></client-Header>
-		<a class="btn btn-primary" href="" ng-click="getClients()" title="">Append Table Directive</a>
-		<!-- <client-Search></client-Search> //应该加载到这
-		<client-Table/> -->
+	<div class="col-lg-12" ng-app="clientApp" ng-controller="clientController">
+		<div class="container">
+			<hr>
+			<client-Header></client-Header>
+			<a class="btn btn-primary" href="" ng-click="getClients()" title="">Append Table Directive</a>
+			<!-- <client-Search></client-Search> //应该加载到这
+			<client-Table/> -->
+		</div>
 	</div>
-</div>
 		
 DIRECTIVE:
 angular.module('clientDirectives',[])
