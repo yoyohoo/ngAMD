@@ -23,6 +23,24 @@ define(['app'], function(app) {
 		$el('a.btn:last').on('click', function() {
 			$scope.showBottomAlert(new Date().toString().substr(16, 8), 'Complete!');
 		})
+		
+		//动态加载directive：
+		$scope.getUrlData = function(url, callback) {
+			return getData(url, callback);
+		}
+		$scope.appendSearchTable = function() {
+			var container = angular.element('.container'),
+				compile = $compile('<client-Search></client-Search><client-Table/>')($scope);
+			container.append(compile);
+		}
+		$scope.getClients = function() {
+			$scope.getUrlData('http://www.w3schools.com/angular/customers.php', function(r) {
+				$scope.customers = r.data.records;
+				$scope.appendSearchTable();
+			}, function(r) {
+				alert(r);
+			})
+		}
 	}])
 
 	// return ['$scope', '$timeout', function($scope, $timeout) {
